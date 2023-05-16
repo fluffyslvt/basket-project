@@ -6,8 +6,13 @@ const basketUi = document.querySelector(".basket-list");
 const basket = new Basket();
 
 const createBasketUi = () => {
-  const newLi = document.createElement("li"); // <li>
-  basketUi.appendChild(newLi);
+  basketUi.innerText = "";
+
+  for (const product of basket.getBasketSummary()) {
+    const newLi = document.createElement("li"); // <li>
+    newLi.innerText = product;
+    basketUi.appendChild(newLi);
+  }
 };
 
 const addProductToBasket = (e) => {
