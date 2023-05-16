@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 class Basket {
   constructor() {
@@ -19,13 +19,11 @@ class Basket {
     return this.items.reduce((prev, curr) => prev + curr.price, 0);
   }
 
-  showBasket() {
-    this.items
-      .map(
-        (product, i) =>
-          `${i + 1} - ${product.name} - ${product.price.toFixed(2)}zł`
-      )
-      .forEach((text) => console.log(text));
+  getBasketSummary() {
+    return this.items.map(
+      (product, i) =>
+        `${i + 1} - ${product.name} - ${product.price.toFixed(2)}zł`
+    );
   }
 
   remove(no) {
