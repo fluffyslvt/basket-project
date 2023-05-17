@@ -6,12 +6,21 @@ const buyAllBtn = document.querySelector(".btn-buy-all");
 
 const basket = new Basket();
 
+const removeItem = (e) => {
+  const id = Number(e.target.dataset.id);
+  basket.remove(id);
+  createBasketUi();
+};
+
 const createBasketUi = () => {
   basketUi.innerText = "";
 
-  for (const product of basket.getBasketSummary()) {
+  // destrukturyzacja obj.
+  for (const { id, text } of basket.getBasketSummary()) {
     const newLi = document.createElement("li"); // <li>
-    newLi.innerText = product;
+    newLi.innerText = text;
+    newLi.addEventListener("click", removeItem);
+    newLi.dataset.id = id;
     basketUi.appendChild(newLi);
   }
 
