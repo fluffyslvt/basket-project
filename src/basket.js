@@ -6,14 +6,14 @@ class Basket {
     // this.totalValue = 0;
   }
 
+  clear() {
+    this.items.length = 0;
+  }
+
   add(item) {
     this.items.push(item);
     // this.addToTotalValue(item.price);
   }
-
-  // addToTotalValue(newPrice) {
-  //   this.totalValue += newPrice;
-  // }
 
   getTotalValue() {
     return this.items.reduce((prev, curr) => prev + curr.price, 0);

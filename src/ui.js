@@ -2,6 +2,7 @@
 
 const buyBtns = [...document.querySelectorAll("[data-name]")];
 const basketUi = document.querySelector(".basket-list");
+const buyAllBtn = document.querySelector(".btn-buy-all");
 
 const basket = new Basket();
 
@@ -13,6 +14,13 @@ const createBasketUi = () => {
     newLi.innerText = product;
     basketUi.appendChild(newLi);
   }
+
+  const basketTotalValue = basket.getTotalValue();
+  buyAllBtn.innerText = `Złóż zamówienie na kwotę ${basketTotalValue.toFixed(
+    2
+  )}zł`;
+
+  buyAllBtn.disabled = basketTotalValue === 0;
 };
 
 const addProductToBasket = (e) => {
@@ -24,6 +32,16 @@ const addProductToBasket = (e) => {
   createBasketUi();
 };
 
+const buyAllProducts = () => {
+  const basketTotalValue = basket.getTotalValue();
+  alert(`Zakupiono produkty o wartości: ${basketTotalValue.toFixed(2)}zł`);
+
+  basket.clear();
+  createBasketUi();
+};
+
 buyBtns.forEach((btn) => {
   btn.addEventListener("click", addProductToBasket);
 });
+
+buyAllBtn.addEventListener("click", buyAllProducts);
