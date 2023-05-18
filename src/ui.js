@@ -54,3 +54,5 @@ buyBtns.forEach((btn) => {
 });
 
 buyAllBtn.addEventListener("click", buyAllProducts);
+
+createBasketUi();
