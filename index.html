@@ -9,7 +9,7 @@
   <body>
     <section class="products">
       <h1>Lista produktów</h1>
-      <ul>
+      <ul class="products-list">
         <li>
           <strong>Ogórki kiszone</strong> - 9.99
           <button
@@ -47,8 +47,17 @@
       <ul class="basket-list"></ul>
       <button class="btn-buy-all" disabled>Złóż zamówienie</button>
     </section>
+    <section class="admin-panel">
+      <h1>Administracja</h1>
+      <form action="#" class="form-add-product">
+        <input type="text" name="product-name" placeholder="Nazwa" required />
+        <input type="number" name="product-price" placeholder="Cena" required />
+        <button type="submit">Dodaj</button>
+      </form>
+    </section>
 
     <script src="src/basket.js"></script>
     <script src="src/ui.js"></script>
+    <script src="src/admin-ui.js"></script>
   </body>
 </html>
