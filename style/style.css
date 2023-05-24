@@ -1,5 +1,81 @@
+/* Main styles */
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+  padding: 0.25rem;
+}
+
+p,
+button,
+a,
+span,
+li,
+input {
+  font-size: 2rem;
+  padding: 0.25rem;
+
+  text-decoration: none;
+  list-style: none;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  /* background-color: #f1efe9; */
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main > section {
+  width: 30%;
+  height: 60rem;
+  padding: 2rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.26);
+  border-radius: 2rem;
+  /* background-color: #e2ded1; */
+
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+form > input,
+button {
+  margin: 1rem;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

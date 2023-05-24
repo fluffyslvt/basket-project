@@ -8,54 +8,61 @@
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
-    <section class="products">
-      <h1>Lista produktów</h1>
-      <ul class="products-list">
-        <li>
-          <strong>Ogórki kiszone</strong> - 9.99
-          <button
-            class="btn-buy-product"
-            data-name="Ogórki kiszone"
-            data-price="9.99"
-          >
-            Kup
-          </button>
-        </li>
-        <li>
-          <strong>Pomidory</strong> - 7.50
-          <button
-            class="btn-buy-product"
-            data-name="Pomidory"
-            data-price="7.50"
-          >
-            Kup
-          </button>
-        </li>
-        <li>
-          <strong>Mercedes C Klasa</strong> - 50000.00
-          <button
-            class="btn-buy-product"
-            data-name="Mercedes C Klasa"
-            data-price="50000.00"
-          >
-            Kup
-          </button>
-        </li>
-      </ul>
-    </section>
-    <section class="basket">
-      <h1>Koszyk</h1>
-      <ul class="basket-list"></ul>
-      <button class="btn-buy-all" disabled>Złóż zamówienie</button>
-    </section>
-    <section class="admin-panel">
-      <h1>Administracja</h1>
-      <form action="#" class="form-add-product">
-        <input type="text" name="product-name" placeholder="Nazwa" required />
-        <input type="number" name="product-price" placeholder="Cena" required />
-        <button type="submit">Dodaj</button>
-      </form>
-    </section>
+    <main>
+      <section class="products">
+        <h1>Lista produktów</h1>
+        <ul class="products-list">
+          <li>
+            <strong>Ogórki kiszone</strong> - 9.99
+            <button
+              class="btn-buy-product"
+              data-name="Ogórki kiszone"
+              data-price="9.99"
+            >
+              Kup
+            </button>
+          </li>
+          <li>
+            <strong>Pomidory</strong> - 7.50
+            <button
+              class="btn-buy-product"
+              data-name="Pomidory"
+              data-price="7.50"
+            >
+              Kup
+            </button>
+          </li>
+          <li>
+            <strong>Mercedes C Klasa</strong> - 50000.00
+            <button
+              class="btn-buy-product"
+              data-name="Mercedes C Klasa"
+              data-price="50000.00"
+            >
+              Kup
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section class="basket">
+        <h1>Koszyk</h1>
+        <ul class="basket-list"></ul>
+        <button class="btn-buy-all" disabled>Złóż zamówienie</button>
+      </section>
+      <section class="admin-panel">
+        <h1>Administracja</h1>
+        <form action="#" class="form-add-product">
+          <input type="text" name="product-name" placeholder="Nazwa" required />
+          <input
+            type="number"
+            name="product-price"
+            placeholder="Cena"
+            required
+          />
+          <button type="submit">Dodaj</button>
+        </form>
+      </section>
+    </main>
 
     <!-- Scripts -->
     <script src="src/basket.js"></script>
