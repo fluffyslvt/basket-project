@@ -24,7 +24,6 @@ span,
 li,
 input {
   font-size: 2rem;
-  padding: 0.25rem;
 
   text-decoration: none;
   list-style: none;
@@ -61,6 +60,19 @@ form {
 form > input,
 button {
   margin: 1rem;
+}
+
+.add-btn,
+.btn-buy-all {
+  background-color: green;
+  color: #fff;
+  border: none;
+  padding: 1.5rem;
+
+  /* width: 25rem;
+  border-radius: 10rem; */
+
+  cursor: pointer;
 }
 
 /* Scroll bar */
