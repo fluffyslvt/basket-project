@@ -44,7 +44,7 @@ main > section {
   height: 60rem;
   padding: 2rem;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.26);
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   /* background-color: #e2ded1; */
 
   display: flex;
@@ -64,13 +64,28 @@ button {
 
 .add-btn,
 .btn-buy-all {
-  background-color: green;
+  background-color: black;
   color: #fff;
   border: none;
   padding: 1.5rem;
+  border-radius: 5rem;
 
-  /* width: 25rem;
-  border-radius: 10rem; */
+  cursor: pointer;
+}
+
+.form-add-product > input {
+  background-color: black;
+  color: #fff;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 5rem;
+
+  cursor: pointer;
+}
+
+li > button {
+  color: #000;
+  border: none;
 
   cursor: pointer;
 }
